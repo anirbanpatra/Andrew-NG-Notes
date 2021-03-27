@@ -230,8 +230,9 @@ _**Implementation tip**_: if you implement gradient descent, one of the steps to
 
 - **Data augmentation**:
   - For example in a computer vision data:
-    - You can flip all your pictures horizontally this will give you m more data instances.
-    - You could also apply a random position and rotation to an image to get more data.
+    - You can flip all your pictures horizontally this will give you m more data instances. However this may not be         as good as adding additional set of brand new data as your training set may be bit redundant after this.
+    - You can also use random crops or rotating. And sort of random zoom into the image may be helpful.
+    - You could also apply a random distortions, translation and rotation to an image to get more data.
   - For example in OCR, you can impose random rotations and distortions to digits/letters.
   - New data obtained using this technique isn't as good as the real independent data, but still can be used as a regularization technique.
 - **Early stopping**:
